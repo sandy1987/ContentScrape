@@ -1,0 +1,77 @@
+== README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+<b>Things you may want to cover:</b>
+
+* Ruby version
+  2.2
+
+* Database Configuration
+  PostgreSQL
+
+* Go the project directory and please do <b>bundle install, rake db:create, rake db:migrate </b>
+
+<b>Things you need to cover to test ContentScrape App:</b>
+
+* RestClient( for browser required) or Postman require to test API's
+
+<b>Things you need cover how ContentScrape App Works:</b>
+
+<b><i>Endpoints:</i></b>
+
+<b> 1. Store the Content with h1, h2, h3 tags and the links </b>
+
+Request URL: http://localhost:3000//api/v1/contents
+
+Method: POST
+
+Request Header: Content-Type/application/json
+
+Parameters (Body): Refer <b>params.doc</b> file from app
+
+Response: {"success": true,"message": "ContentTag and URL are Stored Successfully"}
+
+<b>2. Show list of the urls and content stored in the database</b>
+
+Request URL: http://localhost:3000//api/v1/contents
+
+Method: GET
+
+Request Header: Content-Type/application/json
+
+Parameters (Body): No Parameter
+
+Response:
+
+    [
+        {
+            "id": 1,
+            "content_id": 1,
+            "tag_content": "This is My Facebook URL",
+            "url": "www.facebook.com",
+            "created_at": "2016-08-04T12:11:07.804Z",
+            "updated_at": "2016-08-04T12:11:07.804Z"
+        },
+        {
+            "id": 2,
+            "content_id": 1,
+            "tag_content": "This is My Twitter URL ",
+            "url": "https://twitter.com/",
+            "created_at": "2016-08-04T12:11:07.873Z",
+            "updated_at": "2016-08-04T12:11:07.873Z"
+        },
+        {
+            "id": 3,
+            "content_id": 1,
+            "tag_content": "This is My Instagram URL",
+            "url": "https://www.instagram.com/",
+            "created_at": "2016-08-04T12:11:07.888Z",
+            "updated_at": "2016-08-04T12:11:07.888Z"
+        }
+    ]
+
+<i> I hope it will help you to test ContentScrape App..Thank You !!!!!!</i>
+
+
